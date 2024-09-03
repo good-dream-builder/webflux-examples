@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: hae-poc-admin-server
+
+  datasource:
+    mongodb:
+      host: localhost       # MongoDB ??? ??? (???: localhost)
+      port: 27017           # MongoDB ??? ?? (???: 27017)
+      database: hae-poc     # ??? MongoDB ?????? ??
+
+mongodb:
+  connection:
+    timeout: 2000           # ?? ?? ?? ?? (???)
+    socket-timeout: 3000    # ?? ?? ?? ?? (???)
+
+jwt:
+  secret-key: 고윤정카라나장원영이주은냥뇽녕냥
+  token-expiration-seconds: 1800
+
+#logging:
+#  level:
+#    org.springframework.cloud: DEBUG
+#    org.springframework.web: TRACE
+#    org.springframework.security: TRACE
+#    org.hibernate.SQL: DEBUG # Hibernate? SQL ?? ?? ??
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE # SQL ???? ??? ?? ??
+#    com.acrofuture: DEBUG
+#
+#springdoc:
+#  packages-to-scan: com.acrofuture
+#  default-consumes-media-type: application/json;charset=UTF-8
+#  default-produces-media-type: application/json;charset=UTF-8
+#  swagger-ui:
+#    path: swagger-ui.html
+#    disable-swagger-default-url: true
+#    display-request-duration: true
+#    operations-sorter: alpha
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v1/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
